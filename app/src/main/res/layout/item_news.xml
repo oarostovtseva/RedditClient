@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/standart_margin"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/itemThumb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:transitionName="newsImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_empty_picture" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standart_margin"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/itemThumb"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/itemTimeAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standart_margin"
+        app:layout_constraintLeft_toRightOf="@id/itemThumb"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemTitle"
+        tools:text="hours ago" />
+
+    <TextView
+        android:id="@+id/itemComments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standart_margin"
+        app:layout_constraintLeft_toRightOf="@id/itemThumb"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemTimeAuthor"
+        tools:text="N comments" />
+
+</android.support.constraint.ConstraintLayout>
